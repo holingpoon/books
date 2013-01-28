@@ -1,0 +1,6 @@
+{ "books": [
+    {"id": 1, "title": "Dandelion Wine", "lastname": "Bradbury", "firstname": "Ray", "status": "Completed" },
+    {"id": 2, "title": "The Hobbit", "lastname": "Tolkien", "firstname": "J.R.R.", "status": "Reading"},
+    {"id": 3, "title": "Orientalism", "lastname": "Said", "firstname": "Edward", "status": "Wishlist"}
+    ]
+}

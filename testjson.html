@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Testing JSON</title>
+<style>
+    #container {width: 100%; float:left;}
+    #Wishlist, #Completed, #Reading { width: 33%; float:left; border: 1px #000 dotted;}
+</style>
+<script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $.getJSON('testdb.php', function(books) {
+            $.each( books, function (index, book) {
+                var status = "#" + book.status;
+                var aBook = $("<p/>").append(
+                "Title: " + book.title + "<br />" +
+                "Author: " + book.firstname + " " + book.lastname 
+                );
+                $(status).append(aBook);
+            });
+        });
+    });
+</script>
+</head>
+<body id="home">
+<div id="container">
+    <div id="Completed"><p>Completed</p></div>
+    <div id="Reading"><p>Reading</p></div>
+    <div id="Wishlist"><p>Wishlist</p></div>
+</div>
+</body>
+</html>
+
