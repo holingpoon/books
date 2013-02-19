@@ -6,6 +6,8 @@
 <style>
     #container {width: 100%; float:left;}
     #Wishlist, #Completed, #Reading { width: 33%; float:left; border: 1px #000 dotted;}
+    .bookimage {width:126px; height:160px; margin:auto; background-color: #CCC;}
+    img.book {display:block; margin:auto; vertical-align: middle;}
 </style>
 <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
 <script type="text/javascript">
@@ -13,11 +15,12 @@
         $.getJSON('testdb.php', function(books) {
             $.each( books, function (index, book) {
                 var status = "#" + book.status;
+                var image = "<div class='bookimage'><img class='book' width='100' src=\'images/" + book.image + "\' /></div>";
                 var aBook = $("<p/>").append(
                 "Title: " + book.title + "<br />" +
                 "Author: " + book.firstname + " " + book.lastname 
                 );
-                $(status).append(aBook);
+                $(status).append(aBook).append(image);
             });
         });
     });

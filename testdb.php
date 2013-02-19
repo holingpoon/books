@@ -9,6 +9,7 @@
         $books[$i]['firstname'] = $row['firstname'];
         $books[$i]['lastname'] = $row['lastname'];
         $books[$i]['status'] = $row['status'];
+        $books[$i]['image'] = $row['image'];
         $i += 1;
 //        echo "Id: ". $row['id']. "<br/>";
 //        echo "Title: ". $row['title']. "<br/>";
