@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Testing JSON</title>
+<title>Testing PHP</title>
 <style>
     #container {width: 100%; float:left;}
     #Wishlist, #Completed, #Reading { width: 33%; float:left; border: 1px #000 dotted;}
@@ -10,13 +10,12 @@
     img.book {display:block; margin:auto; vertical-align: middle;}
 </style>
 <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
-        var readMeText = $("<p/>").append("This version reads from a JSON file.");
-        
-        
-        $.getJSON('books.json', function(data) {
-            $.each( data.books, function (index, book) {
+        var readMeText = $("<p/>").append("This example has jQuery making a call to PHP to retrieve items from database. Calling PHP is slower than parsing a JSON file.");
+        $.getJSON('testdb.php', function(books) {
+            $.each( books, function (index, book) {
                 var status = "#" + book.status;
                 var image = "<div class='bookimage'><img class='book' width='100' src=\'images/" + book.image + "\' /></div>";
                 var aBook = $("<p/>").append(
@@ -37,7 +36,6 @@
     <div id="Reading"><p>Reading</p></div>
     <div id="Wishlist"><p>Wishlist</p></div>
 </div>
-
 </body>
 </html>
 
