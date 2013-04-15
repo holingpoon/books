@@ -29,3 +29,4 @@
 [14-Apr-2013 19:35:29 America/Denver] PHP Fatal error:  Method name must be a string in /home1/holingpo/public_html/sandbox/books/book.php on line 9
 [14-Apr-2013 19:48:01 America/Denver] PHP Notice:  Undefined variable: title in /home1/holingpo/public_html/sandbox/books/book.php on line 10
 [14-Apr-2013 19:48:46 America/Denver] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting T_FUNCTION in /home1/holingpo/public_html/sandbox/books/book.php on line 3
+[14-Apr-2013 20:02:55 America/Denver] PHP Parse error:  syntax error, unexpected T_PRINT, expecting T_STRING in /home1/holingpo/public_html/sandbox/books/book.php on line 42
