@@ -11,10 +11,6 @@
         $books[$i]['status'] = $row['status'];
         $books[$i]['image'] = $row['image'];
         $i += 1;
-//        echo "Id: ". $row['id']. "<br/>";
-//        echo "Title: ". $row['title']. "<br/>";
-//        echo "Author: ". $row['firstname']." ".$row['lastname']. "<br/>";
-//        echo "Status: ". $row['status']. "<br/><br/>";
     }
     echo json_encode($books);
 ?>
