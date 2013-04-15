@@ -12,6 +12,9 @@
 		$this->isbn = $isbn;
 	}
 
+	// Can't use __set() and __get() overloads
+	// All properties need to be public.
+
 	public function setTitle($newTitle) {
 		$this->title = $newTitle;
 	}
