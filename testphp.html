@@ -10,22 +10,10 @@
     img.book {display:block; margin:auto; vertical-align: middle;}
 </style>
 <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
-<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+<script src="withphp.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
-        var readMeText = $("<p/>").append("This example has jQuery making a call to PHP to retrieve items from database. Making a call to server for PHP is slower than parsing a JSON file.");
-        $.getJSON('testdb.php', function(books) {
-            $.each( books, function (index, book) {
-                var status = "#" + book.status;
-                var image = "<div class='bookimage'><img class='book' width='100' src=\'images/" + book.image + "\' /></div>";
-                var aBook = $("<p/>").append(
-                "Title: " + book.title + "<br />" +
-                "Author: " + book.firstname + " " + book.lastname 
-                );
-                $(status).append(aBook).append(image);
-            });
-        });
-        $("#readme").append(readMeText);
+        setup();        
     });
 </script>
 </head>
@@ -35,6 +23,9 @@
     <div id="Completed"><p>Completed</p></div>
     <div id="Reading"><p>Reading</p></div>
     <div id="Wishlist"><p>Wishlist</p></div>
+</div>
+<div id="theform">
+<!-- <p><a href="#"  onclick="drawform();">Draw Form</a></p> -->
 </div>
 </body>
 </html>

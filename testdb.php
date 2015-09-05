@@ -3,7 +3,7 @@
     $result = $db->query('SELECT * FROM book');
     $books = array();
     $i = 0;
-    while (($row = $result->fetchArray()) == true) {
+    while (($row = $result->fetchArray()) !== false) {
         $books[$i]['id'] = $row['id'];
         $books[$i]['title'] = $row['title'];
         $books[$i]['firstname'] = $row['firstname'];
